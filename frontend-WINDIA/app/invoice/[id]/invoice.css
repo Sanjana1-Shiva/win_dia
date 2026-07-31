@@ -1,0 +1,77 @@
+.invoice-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px 60px;
+  font-family: 'Nunito', 'Segoe UI', sans-serif;
+  color: #3a2a1e;
+}
+
+.invoice-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.invoice-print-btn {
+  background: linear-gradient(135deg, #c56a3d, #b55e35);
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(197,106,61,0.3);
+}
+
+.invoice-sheet {
+  background: #fff;
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  border: 1px solid #f0e6df;
+}
+
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 2px solid #f0e6df;
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+
+.invoice-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #c56a3d;
+  margin: 0;
+}
+.invoice-brand-sub { color: #a89a92; font-size: 13px; margin-top: 2px; }
+
+.invoice-meta { text-align: right; font-size: 13px; line-height: 1.7; }
+.invoice-meta strong { color: #3a2a1e; }
+
+.invoice-addresses { margin-bottom: 28px; }
+.invoice-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #a89a92; font-weight: 700; margin-bottom: 6px; }
+.invoice-address-name { font-weight: 700; margin: 0 0 2px; }
+.invoice-addresses p { margin: 2px 0; font-size: 14px; }
+
+.invoice-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+.invoice-table th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #a89a92; padding: 10px 8px; border-bottom: 2px solid #f0e6df; }
+.invoice-table td { padding: 12px 8px; border-bottom: 1px solid #f5ede6; font-size: 14px; }
+
+.invoice-totals { max-width: 300px; margin-left: auto; }
+.invoice-totals-row { display: flex; justify-content: space-between; padding: 6px 0; font-size: 14px; color: #6b5d55; }
+.invoice-grand-total { border-top: 2px solid #3a2a1e; margin-top: 8px; padding-top: 10px; font-weight: 800; font-size: 18px; color: #3a2a1e; }
+
+.invoice-footer { text-align: center; color: #a89a92; font-size: 12px; margin-top: 36px; }
+
+.invoice-loading { text-align: center; padding: 80px 20px; color: #a89a92; }
+
+@media print {
+  .no-print { display: none !important; }
+  .invoice-page { margin: 0; padding: 0; }
+  .invoice-sheet { box-shadow: none; border: none; padding: 0; }
+}

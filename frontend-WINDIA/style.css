@@ -1,0 +1,88 @@
+/* ============================================
+   NEERUMITRA — SHARED STYLESHEET
+   Every page links to this file so colors, fonts
+   and buttons stay consistent across the whole site.
+   ============================================ */
+
+:root{
+  --blue-deep: #0B3B6B;
+  --blue-main: #1E6FD9;
+  --blue-bright: #2F8CF0;
+  --aqua: #1FC2D6;
+  --leaf: #2FAE66;
+  --bg: #F6FAFE;
+  --bg-panel: #FFFFFF;
+  --ink: #10243E;
+  --ink-soft: #56708F;
+  --border: #E3ECF6;
+  --shadow: 0 8px 30px rgba(16,36,62,0.08);
+  --radius: 16px;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--bg);
+  line-height:1.6;
+}
+a{ text-decoration:none; color:inherit; }
+ul{ list-style:none; }
+img,svg{ display:block; max-width:100%; }
+h1,h2,h3{ font-family: var(--font-display); color: var(--ink); }
+
+.container{ max-width:1200px; margin:0 auto; padding:0 32px; }
+
+/* ---------- Buttons (used everywhere) ---------- */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  font-family: var(--font-body); font-weight:600; font-size:0.95rem;
+  padding:12px 26px; border-radius:10px; cursor:pointer;
+  border:none; transition:transform .15s ease, box-shadow .15s ease;
+}
+.btn:hover{ transform:translateY(-2px); }
+.btn-primary{
+  background: linear-gradient(135deg, var(--blue-main), var(--aqua));
+  color:#fff; box-shadow:0 10px 24px rgba(30,111,217,0.28);
+}
+.btn-ghost{
+  background:transparent; color:var(--blue-deep);
+  border:1.5px solid var(--border);
+}
+.btn-ghost:hover{ border-color: var(--blue-main); }
+.btn-sm{ padding:10px 20px; font-size:0.88rem; }
+.btn-block{ width:100%; }
+
+/* ---------- Form fields (used on Login/Register/Dashboard forms) ---------- */
+.field{ margin-bottom:18px; text-align:left; }
+.field label{
+  display:block; font-size:0.85rem; font-weight:600;
+  color: var(--ink); margin-bottom:7px;
+}
+.field input, .field select{
+  width:100%; padding:13px 14px; border-radius:10px;
+  border:1.5px solid var(--border); font-family:var(--font-body);
+  font-size:0.95rem; color:var(--ink); background:#fff;
+  transition:border-color .15s ease;
+}
+.field input:focus, .field select:focus{
+  outline:none; border-color: var(--blue-main);
+}
+.field-icon-wrap{ position:relative; }
+.field-icon-wrap input{ padding-right:44px; }
+.field-toggle{
+  position:absolute; right:12px; top:50%; transform:translateY(-50%);
+  cursor:pointer; background:none; border:none; padding:4px;
+}
+
+/* ---------- Small reusable pieces ---------- */
+.eyebrow{
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:0.82rem; font-weight:600; letter-spacing:0.04em;
+  color: var(--blue-main); background:#EAF3FE;
+  padding:7px 14px; border-radius:999px;
+}
+.eyebrow::before{ content:''; width:7px; height:7px; border-radius:50%; background: var(--aqua); }

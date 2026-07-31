@@ -1,0 +1,131 @@
+@import '../../variables.css';
+
+.auth-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 20, 10, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: var(--win-dia-spacing-md);
+}
+
+.auth-modal-card {
+  position: relative;
+  background: var(--win-dia-white);
+  border-radius: var(--win-dia-radius-lg);
+  width: 100%;
+  max-width: 400px;
+  padding: var(--win-dia-spacing-2xl) var(--win-dia-spacing-xl) var(--win-dia-spacing-xl);
+  text-align: center;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+}
+
+.auth-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: var(--win-dia-cream);
+  color: var(--win-dia-text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--win-dia-transition-fast);
+}
+
+.auth-modal-close:hover {
+  background: var(--win-dia-gray-light);
+  transform: rotate(90deg);
+}
+
+.auth-modal-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--win-dia-spacing-md);
+  border-radius: 50%;
+  background: var(--win-dia-primary-gradient);
+  color: var(--win-dia-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.auth-modal-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--win-dia-text-brown);
+  font-family: var(--win-dia-font-primary);
+  margin-bottom: var(--win-dia-spacing-sm);
+}
+
+.auth-modal-desc {
+  font-size: 0.95rem;
+  color: var(--win-dia-text-light);
+  line-height: 1.5;
+  margin-bottom: var(--win-dia-spacing-xl);
+}
+
+.auth-modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--win-dia-spacing-sm);
+  margin-bottom: var(--win-dia-spacing-md);
+}
+
+.auth-modal-btn {
+  width: 100%;
+  padding: 13px var(--win-dia-spacing-lg);
+  border-radius: var(--win-dia-radius-full);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--win-dia-spacing-sm);
+  transition: all var(--win-dia-transition-base);
+  border: 2px solid transparent;
+}
+
+.auth-modal-btn--primary {
+  background: var(--win-dia-primary-gradient);
+  color: var(--win-dia-white);
+}
+
+.auth-modal-btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--win-dia-shadow-md);
+}
+
+.auth-modal-btn--secondary {
+  background: transparent;
+  border-color: var(--win-dia-gray-light);
+  color: var(--win-dia-text-brown);
+}
+
+.auth-modal-btn--secondary:hover {
+  border-color: var(--win-dia-primary);
+  color: var(--win-dia-primary);
+}
+
+.auth-modal-dismiss {
+  background: none;
+  border: none;
+  color: var(--win-dia-text-light);
+  font-size: 0.85rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.auth-modal-dismiss:hover {
+  color: var(--win-dia-text-brown);
+}

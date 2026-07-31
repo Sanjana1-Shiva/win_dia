@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap');
+ 
+.body{
+    padding-top: 80px;
+}
+.announcementBar {
+  width: 100%;
+  background: #612401;
+  overflow: hidden;
+  height: 42px;
+  top: 80px;
+  display: flex;
+  align-items: center;
+  mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+}
+ 
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 20s linear infinite;
+}
+ 
+.marqueeTrack:hover {
+  animation-play-state: paused;
+}
+ 
+.marqueeContent {
+  display: flex;
+  align-items: center;
+}
+ 
+.marqueeItem {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: #bba680;
+  letter-spacing: 0.025em;
+  padding: 0 32px;
+  white-space: nowrap;
+}
+ 
+.marqueeItem .code {
+  font-weight: 700;
+  color: #f5c842;
+  letter-spacing: 0.08em;
+  background: rgba(245, 200, 66, 0.12);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+ 
+.marqueeDivider {
+  color: #f5c842;
+  font-size: 20px;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+ 
+@keyframes marqueeScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

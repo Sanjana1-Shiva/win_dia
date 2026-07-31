@@ -1,0 +1,36 @@
+@import '../../variables.css';
+
+.recommended-section {
+  max-width: 1280px;
+  margin: var(--win-dia-spacing-3xl) auto 0;
+  padding: 0 var(--win-dia-spacing-lg);
+}
+
+.recommended-title {
+  font-family: var(--win-dia-font-primary);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--win-dia-text-brown);
+  margin-bottom: var(--win-dia-spacing-lg);
+  position: relative;
+  padding-left: 16px;
+}
+.recommended-title::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 4px; bottom: 4px;
+  width: 4px;
+  border-radius: 4px;
+  background: var(--win-dia-primary-gradient);
+}
+
+.recommended-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--win-dia-spacing-lg);
+}
+
+@media (max-width: 600px) {
+  .recommended-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .recommended-title { font-size: 1.3rem; }
+}
