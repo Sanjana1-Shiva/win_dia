@@ -1,0 +1,18 @@
+# Backend — kept local, has its own separate repo/push workflow
+backend/
+
+# Next.js
+.next/
+out/
+
+# Dependencies
+node_modules/
+
+# Env files — never commit secrets
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
